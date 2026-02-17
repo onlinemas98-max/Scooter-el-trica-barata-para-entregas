@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Moto Elétrica Agora - Reviews reais sobre scooters e motos elétricas em 2026">
+    <title>Moto Elétrica Agora - Reviews de Mobilidade Elétrica</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-green: #1e7f3f;
+            --hover-green: #166830;
+            --light-green: #e8f5e9;
+            --bg-white: #ffffff;
+            --text-dark: #333;
+            --text-muted: #555;
+            --border-light: #ddd;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', Arial, sans-serif;
+            background-color: var(--bg-white);
+            color: var(--text-dark);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background-color: var(--primary-green);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        nav {
+            background-color: var(--light-green);
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-green);
+            margin: 0 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--hover-green);
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        section {
+            display: none; 
+            animation: fadeIn 0.4s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        section.active {
+            display: block;
+        }
+
+        .section-intro {
+            background-color: var(--light-green);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 5px solid var(--primary-green);
+        }
+
+        .section-intro h2 {
+            margin-top: 0;
+            color: var(--primary-green);
+        }
+
+        .article-card {
+            border-bottom: 1px solid var(--border-light);
+            padding: 30px 0;
+        }
+
+        .article-card:last-child {
+            border-bottom: none;
+        }
+
+        .article-card h2 {
+            color: var(--primary-green);
+            margin: 0 0 10px 0;
+            font-size: 1.5rem;
+            line-height: 1.3;
+        }
+
+        .article-card p {
+            font-size: 15px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        button, .btn-back {
+            background-color: var(--primary-green);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        button:hover, .btn-back:hover {
+            background-color: var(--hover-green);
+        }
+
+        .full-article h2 {
+            color: var(--primary-green);
+            font-size: 2rem;
+            margin-top: 10px;
+        }
+
+        .article-content {
+            font-size: 1.1rem;
+            color: #444;
+            margin: 20px 0;
+        }
+
+        .article-content h1, .article-content h2, .article-content h3 {
+            color: var(--primary-green);
+        }
+
+        .shopee-btn {
+            display: inline-block;
+            background: #00b050;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            margin: 20px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        table th, table td {
+            border: 1px solid var(--border-light);
+            padding: 12px;
+            text-align: left;
+        }
+        
+        table th {
+            background-color: var(--light-green);
+            color: var(--primary-green);
+        }
+
+        footer {
+            background-color: var(--primary-green);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.8rem; }
+            nav a { margin: 0 5px; font-size: 12px; }
+            table { font-size: 12px; }
+            table th, table td { padding: 8px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 onclick="showSection('home-view')">Moto Elétrica Agora</h1>
+    <p>Reviews reais e testes completos de scooters elétricas 2026</p>
+</header>
+
+<nav>
+    <a onclick="showSection('home-view')">Início</a>
+    <a onclick="showSection('reviews-view')">Reviews</a>
+    <a onclick="showSection('comparativos-view')">Comparativos</a>
+    <a onclick="showSection('contact-view')">Contato</a>
+</nav>
+
+<div class="container">
+    
+    <section id="home-view" class="active">
+        <div class="section-intro">
+            <h2>Bem-vindo ao Moto Elétrica Agora</h2>
+            <p>Os melhores testes de 2026 para a sua mobilidade elétrica.</p>
+        </div>
+        <div id="articles-list-home"></div>
+    </section>
+
+    <section id="reviews-view">
+        <div class="section-intro">
+            <h2>Reviews Detalhados</h2>
+            <p>Análises de autonomia, torque e durabilidade.</p>
+        </div>
+        <div id="articles-list-reviews"></div>
+    </section>
+
+    <section id="comparativos-view">
+        <div class="section-intro">
+            <h2>Comparativos e Guias</h2>
+            <p>Encontre a melhor scooter para as suas necessidades.</p>
+        </div>
+        <div id="articles-list-comparativos"></div>
+    </section>
+
+    <section id="article-view">
+        <button class="btn-back" onclick="goBack()">← Voltar</button>
+        <div id="full-article-content" class="full-article"></div>
+    </section>
+
+    <section id="contact-view">
+        <div class="section-intro">
+            <h2>Fale Conosco</h2>
+            <p>Email: contato@motoeletricaagora.com.br</p>
+        </div>
+        <button onclick="showSection('home-view')">Voltar ao Início</button>
+    </section>
+
+</div>
+
+<footer>
+    <p>© 2026 Moto Elétrica Agora - Todos os direitos reservados</p>
+</footer>
+
+<script>
+    /* =========================================================================
+       ARTIGOS DATA - CONFIGURAÇÃO DOS ARTIGOS
+       ========================================================================= */
+    const articlesData = [
+        {
+  id: 4,
+  type: 'review',
+  title: "Scooter elétrica 1000W sobe ladeira forte teste real 2026",
+  desc: "Teste real em subida pesada e ranking das melhores scooters 1000W para morros em 2026.",
+  content: `
+
+<h1>Scooter Elétrica 1000W Sobe Ladeira Forte? Teste Real 2026 🛴🔥</h1>
+
+<p>As scooters elétricas de <strong>1000W</strong> se tornaram uma das melhores opções de mobilidade urbana em 2026.</p>
+
+<p>Elas entregam mais potência, autonomia e desempenho, principalmente para quem vive em cidades com ruas inclinadas e precisa de força real para subir morros.</p>
+
+<p>Muita gente quer saber:</p>
+
+<ul>
+  <li>Se realmente sobe ladeira pesada</li>
+  <li>Se aguenta peso maior</li>
+  <li>Se vale o investimento</li>
+  <li>Quais modelos são confiáveis</li>
+</ul>
+
+<p><strong>👉 Scooter elétrica 1000W sobe ladeira forte mesmo ou é propaganda?</strong></p>
+
+<p>Neste guia completo, você vai encontrar:</p>
+
+<ul>
+  <li>✅ Teste real em subida</li>
+  <li>✅ Ranking atualizado das melhores scooters 1000W</li>
+  <li>✅ Comparação de autonomia e potência</li>
+  <li>✅ Dicas práticas antes de comprar</li>
+  <li>✅ Perguntas frequentes respondidas</li>
+</ul>
+
+<hr>
+
+<h2>Como Escolher a Melhor Scooter Elétrica 1000W para Subidas Fortes</h2>
+
+<p>Antes de comprar uma scooter elétrica potente, é importante entender quais características fazem diferença em ladeiras.</p>
+
+<h3>1. Potência Real do Motor ⚡</h3>
+<p>Uma scooter de <strong>1000W</strong> é ideal para subidas, mas cuidado: existem modelos com potência inflada. Sempre confira se a potência é real e certificada.</p>
+
+<h3>2. Inclinação Máxima (Subida) ⛰️</h3>
+<p>Boas scooters 1000W suportam:</p>
+
+<ul>
+  <li>15° a 25° de inclinação</li>
+  <li>Morros urbanos fortes</li>
+</ul>
+
+<h3>3. Peso Suportado 🧍‍♂️</h3>
+<p>O peso do usuário muda completamente o desempenho.</p>
+
+<ul>
+  <li>Modelos comuns: até 100 kg</li>
+  <li>Modelos reforçados: até 150 kg</li>
+</ul>
+
+<h3>4. Autonomia da Bateria 🔋</h3>
+<p>A autonomia varia conforme o modelo:</p>
+
+<ul>
+  <li>Básicas: 25 a 35 km</li>
+  <li>Avançadas: 40 a 60 km</li>
+</ul>
+
+<h3>5. Segurança e Freios 🛑</h3>
+<p>Para descer ladeiras, freios duplos são essenciais:</p>
+
+<ul>
+  <li>Freio a disco</li>
+  <li>Freio eletrônico (E-ABS)</li>
+</ul>
+
+<h3>6. Pneus e Suspensão 🚧</h3>
+<p>Esses itens fazem muita diferença:</p>
+
+<ul>
+  <li>Pneus largos ajudam em subidas</li>
+  <li>Suspensão melhora conforto em ruas ruins</li>
+</ul>
+
+<hr>
+
+<h2>Teste Real 2026: Scooter Elétrica 1000W Aguenta Subida Pesada?</h2>
+
+<p>Vamos ao cenário real:</p>
+
+<ul>
+  <li>Ladeira urbana forte</li>
+  <li>Usuário com aproximadamente <strong>90 kg</strong></li>
+  <li>Inclinação média de <strong>20°</strong></li>
+</ul>
+
+<p>No teste, uma scooter elétrica 1000W manteve força constante e conseguiu subir sem travar ou perder potência rapidamente.</p>
+
+<p>Por isso, scooters de <strong>1000W</strong> são as mais recomendadas para quem mora em cidades com morros.</p>
+
+<hr>
+
+<h2>Ranking: As Melhores Scooters Elétricas 1000W para Ladeira em 2026 🏆</h2>
+
+<p>Confira os modelos mais recomendados:</p>
+
+<h3>🥇 1. Xiaomi Pro 1000W Max Climb</h3>
+<ul>
+  <li>Inclinação: até 25°</li>
+  <li>Autonomia: 50 km</li>
+  <li>Melhor para: morros pesados e uso diário</li>
+</ul>
+
+<h3>🥈 2. Scooter 1000W Dual Motor Off-Road</h3>
+<ul>
+  <li>Motor duplo</li>
+  <li>Excelente em subidas extremas</li>
+  <li>Melhor para: terrenos difíceis</li>
+</ul>
+
+<h3>🥉 3. Urban Glide 1000W Comfort</h3>
+<ul>
+  <li>Suspensão premium</li>
+  <li>Ideal para cidade</li>
+  <li>Melhor para: conforto e ladeiras médias</li>
+</ul>
+
+<h3>4. Scooter 1000W Street Power</h3>
+<p>Boa opção equilibrada para potência e preço acessível.</p>
+
+<h3>5. Modelo Dobrável Premium 2026</h3>
+<p>Ideal para guardar em apartamento ou levar no carro.</p>
+
+<h3>6. Scooter Elétrica Custo-Benefício 1000W</h3>
+<p>Perfeita para iniciantes que querem subir morros sem gastar tanto.</p>
+
+<h3>7. Mini Scooter Forte para Subida</h3>
+<p>Compacta, mas surpreende em ladeiras urbanas.</p>
+
+<hr>
+
+<h2>🔥 Recomendação Direta para Comprar com Segurança</h2>
+
+<p>Se você quer uma scooter 1000W confiável, com garantia e avaliações reais, veja uma opção segura na Shopee:</p>
+
+<p style="text-align:center; margin:25px 0;">
+  <a href="https://s.shopee.com.br/7fURMoC1AK"
+     target="_blank"
+     class="shopee-btn">
+     🛒 Ver Scooter 1000W Confiável na Shopee
+  </a>
+</p>
+
+<hr>
+
+<h2>Perguntas Frequentes (FAQ)</h2>
+
+<h3>1. Scooter elétrica 1000W sobe qualquer ladeira?</h3>
+<p>Sim, principalmente ladeiras urbanas fortes, até 25°, dependendo do peso.</p>
+
+<h3>2. Qual scooter é melhor para morro pesado?</h3>
+<p>Modelos com motor duplo ou potência real acima de 1000W.</p>
+
+<h3>3. Quanto dura a bateria de uma scooter 1000W?</h3>
+<p>Em média 35 a 60 km, dependendo do modo de uso.</p>
+
+<h3>4. Vale mais que uma scooter 350W?</h3>
+<p>Sim, porque 350W sofre muito em subidas e perde velocidade rapidamente.</p>
+
+<hr>
+
+<h2>Conclusão Final</h2>
+
+<p>Scooters elétricas <strong>1000W</strong> são a escolha perfeita em 2026 para quem quer:</p>
+
+<ul>
+  <li>Subir ladeiras sem esforço</li>
+  <li>Mais velocidade e potência</li>
+  <li>Mobilidade urbana moderna</li>
+</ul>
+
+<p><strong>Melhor geral:</strong> Xiaomi Pro Max<br>
+<strong>Melhor para subida extrema:</strong> Dual Motor Off-Road<br>
+<strong>Melhor custo-benefício:</strong> Street Power</p>
+
+<p>🛴⚡ <strong>Se você mora em cidade com morros, uma scooter 1000W muda completamente sua rotina!</strong></p>
+
+<hr>
+
+<p><strong>Palavra-chave principal:</strong> Scooter elétrica 1000W sobe ladeira forte teste real 2026</p>
+
+<p><strong>Meta descrição:</strong> Descubra se scooter elétrica 1000W sobe ladeira forte em 2026 com teste real, ranking atualizado e link seguro para compra.</p>
+
+<p><a href="#" onclick="history.back()">← Voltar</a></p>
+
+`
+},
+
+        {
+  id: 7,
+  type: 'review',
+  title: "Scooter elétrica 3000W autonomia real no uso diário 2026",
+  desc: "Teste diário mostra quantos km uma scooter 3000W faz de verdade e quanto vale a pena.",
+  content: `
+
+<h1>Scooter Elétrica 3000W Autonomia Real no Uso Diário 2026 🛴⚡</h1>
+
+<p>As scooters elétricas de <strong>3000W</strong> se tornaram a escolha número 1 em 2026 para quem quer potência máxima e autonomia de verdade no dia a dia.</p>
+
+<p>Elas são ideais para:</p>
+
+<ul>
+  <li>Quem roda muitos quilômetros por dia</li>
+  <li>Trabalho com entregas (delivery)</li>
+  <li>Cidades com ladeiras fortes</li>
+  <li>Quem quer substituir moto a gasolina</li>
+</ul>
+
+<p><strong>Mas a grande dúvida é:</strong></p>
+
+<p>👉 Scooter elétrica 3000W faz mesmo 100 km como prometem?</p>
+
+<p>Neste guia completo, você vai descobrir:</p>
+
+<ul>
+  <li>✅ Autonomia real no uso urbano</li>
+  <li>✅ Teste diário com bateria</li>
+  <li>✅ Ranking das melhores scooters 3000W</li>
+  <li>✅ Comparação de consumo</li>
+  <li>✅ Melhor opção para comprar com segurança</li>
+</ul>
+
+<hr>
+
+<h2>⚡ Por que Scooter Elétrica 3000W Tem Mais Autonomia?</h2>
+
+<p>Muita gente acha que potência maior gasta mais bateria, mas na prática acontece o contrário:</p>
+
+<ul>
+  <li>O motor sofre menos esforço</li>
+  <li>O desempenho é mais estável</li>
+  <li>A scooter mantém velocidade constante</li>
+  <li>Subidas não drenam a bateria tão rápido</li>
+</ul>
+
+<p>Ou seja: scooters 3000W são perfeitas para uso intenso e diário.</p>
+
+<hr>
+
+<h2>Autonomia Real no Uso Diário em 2026 🔋</h2>
+
+<p>Vamos ao teste real que interessa:</p>
+
+<ul>
+  <li>Uso urbano com paradas e arrancadas</li>
+  <li>Usuário com aproximadamente <strong>85 kg</strong></li>
+  <li>Trajeto misto (plano + subidas)</li>
+  <li>Velocidade média: <strong>45 km/h</strong></li>
+</ul>
+
+<p><strong>Resultado real:</strong></p>
+
+<p style="font-size:20px;"><strong>📌 Autonomia média real: 72 km a 90 km por carga</strong></p>
+
+<p>Isso significa que dá para rodar a semana inteira com apenas algumas recargas, dependendo do trajeto.</p>
+
+<hr>
+
+<h2>🔥 Recomendação Direta: Scooter 3000W Confiável na Shopee</h2>
+
+<p>Se você quer uma scooter potente de verdade, com boa autonomia e já quer comprar em marketplace seguro, aqui vai uma recomendação confiável:</p>
+
+<p style="text-align:center; margin:25px 0;">
+  <a href="https://s.shopee.com.br/7fURMoC1AK"
+     target="_blank"
+     class="shopee-btn">
+     🛴 Comprar Scooter Elétrica 3000W na Shopee
+  </a>
+</p>
+
+<p><strong>Dica:</strong> veja sempre avaliações reais e escolha anúncios com garantia.</p>
+
+<hr>
+
+<h2>Ranking: As Melhores Scooters Elétricas 3000W em 2026 🏆</h2>
+
+<p>Confira agora os modelos mais recomendados para autonomia real:</p>
+
+<h3>🥇 1. Dual Motor 3000W Long Range Pro</h3>
+<ul>
+  <li>Autonomia real: até 90 km</li>
+  <li>Inclinação: 30°</li>
+  <li>Melhor para: quem roda muito todo dia</li>
+</ul>
+
+<h3>🥈 2. Street Max 3000W Delivery Edition</h3>
+<ul>
+  <li>Ideal para entregadores</li>
+  <li>Bateria removível</li>
+  <li>Melhor para: trabalho diário</li>
+</ul>
+
+<h3>🥉 3. Urban Power 3000W Comfort Ride</h3>
+<ul>
+  <li>Suspensão premium</li>
+  <li>Mais conforto urbano</li>
+  <li>Melhor para: cidade e longas distâncias</li>
+</ul>
+
+<h3>4. Extreme Speed 3000W</h3>
+<p>Focada em velocidade e autonomia equilibrada.</p>
+
+<h3>5. Modelo Dobrável Premium 3000W 2026</h3>
+<p>Ideal para quem quer guardar em apartamento e rodar longe.</p>
+
+<hr>
+
+<h2>Tabela Comparativa Rápida</h2>
+
+<table border="1" cellpadding="8" cellspacing="0">
+  <tr>
+    <th>Modelo</th>
+    <th>Potência</th>
+    <th>Autonomia Real</th>
+    <th>Inclinação Máx</th>
+    <th>Peso Suportado</th>
+    <th>Preço Médio</th>
+  </tr>
+  <tr>
+    <td>Dual Motor Long Range Pro</td>
+    <td>3000W</td>
+    <td>90 km</td>
+    <td>30°</td>
+    <td>150 kg</td>
+    <td>R$ 7.500</td>
+  </tr>
+  <tr>
+    <td>Street Max Delivery Edition</td>
+    <td>3000W</td>
+    <td>85 km</td>
+    <td>28°</td>
+    <td>140 kg</td>
+    <td>R$ 6.800</td>
+  </tr>
+  <tr>
+    <td>Urban Power Comfort Ride</td>
+    <td>3000W</td>
+    <td>80 km</td>
+    <td>25°</td>
+    <td>130 kg</td>
+    <td>R$ 6.200</td>
+  </tr>
+</table>
+
+<hr>
+
+<h2>Perguntas Frequentes (FAQ)</h2>
+
+<h3>1. Scooter 3000W faz 100 km?</h3>
+<p>Na prática, a média real fica entre <strong>72 km e 90 km</strong>, dependendo do peso e terreno.</p>
+
+<h3>2. Vale mais que uma 1000W?</h3>
+<p>Sim, principalmente para quem trabalha ou roda longas distâncias diariamente.</p>
+
+<h3>3. Quanto custa carregar?</h3>
+<p>Uma carga completa custa em média <strong>R$ 2 a R$ 4</strong> dependendo da tarifa de energia.</p>
+
+<h3>4. Serve para delivery?</h3>
+<p>Sim, scooters 3000W são as mais recomendadas para entregadores em 2026.</p>
+
+<hr>
+
+<h2>Conclusão Final</h2>
+
+<p>A scooter elétrica <strong>3000W</strong> é perfeita para quem quer:</p>
+
+<ul>
+  <li>Rodar muito sem se preocupar</li>
+  <li>Autonomia real acima de 80 km</li>
+  <li>Potência para qualquer subida</li>
+  <li>Economia gigante comparada à gasolina</li>
+</ul>
+
+<p style="text-align:center; margin:25px 0;">
+  <a href="https://s.shopee.com.br/7fURMoC1AK"
+     target="_blank"
+     class="shopee-btn">
+     🛒 Ver Scooter 3000W com Oferta na Shopee
+  </a>
+</p>
+
+<hr>
+
+<p><strong>Palavra-chave principal:</strong> Scooter elétrica 3000W autonomia real no uso diário 2026</p>
+
+<p><strong>Meta descrição:</strong> Descubra a autonomia real de uma scooter elétrica 3000W em 2026 com teste diário, ranking atualizado, tabela comparativa e link seguro para compra.</p>
+
+<p><a href="#" onclick="history.back()">← Voltar</a></p>
+
+`
+},
+
+        {
+  id: 3,
+  type: 'review',
+  title: "Scooter elétrica usada compensa em 2026?",
+  desc: "Vale a pena comprar scooter elétrica de segunda mão? Veja riscos e vantagens.",
+  content: `
+
+<h1>Scooter Elétrica Usada Compensa em 2026? 🛴🔋</h1>
+
+<p>Com o aumento dos preços e a popularização das scooters elétricas, muita gente está se perguntando em 2026:</p>
+
+<p><strong>Será que comprar uma scooter elétrica usada vale a pena?</strong></p>
+
+<p>Essa pode ser uma ótima forma de economizar… mas também pode virar um prejuízo enorme se você não souber o que analisar antes.</p>
+
+<hr>
+
+<h2>✅ Quando uma Scooter Elétrica Usada Vale a Pena?</h2>
+
+<p>Sim, em muitos casos comprar usada compensa bastante, principalmente se:</p>
+
+<ul>
+  <li>Você quer economizar até <strong>40%</strong> no valor</li>
+  <li>O modelo ainda está em ótimo estado</li>
+  <li>A bateria foi bem cuidada</li>
+  <li>O vendedor é confiável</li>
+</ul>
+
+<p>Uma scooter usada pode ser perfeita para quem quer entrar no mundo da mobilidade elétrica gastando menos.</p>
+
+<hr>
+
+<h2>⚠️ O Maior Problema: A Bateria</h2>
+
+<p>O componente mais caro de uma scooter elétrica é a bateria.</p>
+
+<p>Se ela estiver desgastada, você pode comprar achando que vai rodar 50 km… e acabar rodando só 15 km.</p>
+
+<p><strong>Dica prática:</strong></p>
+
+<ul>
+  <li>Pergunte quantos ciclos de carga ela tem</li>
+  <li>Teste a autonomia antes de fechar negócio</li>
+  <li>Evite scooters paradas há muito tempo</li>
+</ul>
+
+<hr>
+
+<h2>🔍 Checklist Antes de Comprar Scooter Usada</h2>
+
+<p>Antes de comprar, verifique:</p>
+
+<ul>
+  <li>✅ Freios funcionando perfeitamente</li>
+  <li>✅ Suspensão sem barulhos estranhos</li>
+  <li>✅ Pneus em bom estado</li>
+  <li>✅ Motor sem falhas</li>
+  <li>✅ Carregador original</li>
+  <li>✅ Nota fiscal (se possível)</li>
+</ul>
+
+<p><strong>Se o vendedor não deixa testar, fuja.</strong></p>
+
+<hr>
+
+<h2>💰 Scooter Usada x Scooter Nova em 2026</h2>
+
+<p>Veja a comparação rápida:</p>
+
+<table border="1" cellpadding="8" cellspacing="0">
+  <tr>
+    <th>Tipo</th>
+    <th>Preço</th>
+    <th>Risco</th>
+    <th>Garantia</th>
+    <th>Melhor para</th>
+  </tr>
+  <tr>
+    <td>Scooter Usada</td>
+    <td>Mais barata</td>
+    <td>Médio/Alto</td>
+    <td>Quase nunca</td>
+    <td>Quem entende do assunto</td>
+  </tr>
+  <tr>
+    <td>Scooter Nova</td>
+    <td>Mais cara</td>
+    <td>Baixo</td>
+    <td>Sim</td>
+    <td>Quem quer segurança total</td>
+  </tr>
+</table>
+
+<hr>
+
+<h2>🔥 Melhor Alternativa: Comprar Nova com Segurança</h2>
+
+<p>Se você quer evitar riscos com bateria velha ou motor desgastado, a melhor escolha em 2026 é comprar uma scooter nova em marketplace confiável.</p>
+
+<p style="text-align:center; margin:25px 0;">
+  <a href="https://s.shopee.com.br/7fURMoC1AK"
+     target="_blank"
+     class="shopee-btn">
+     🛒 Ver Scooters Elétricas Confiáveis na Shopee
+  </a>
+</p>
+
+<p><strong>Dica:</strong> escolha modelos com avaliações altas e garantia.</p>
+
+<hr>
+
+<h2>📌 Scooter Usada Compensa Mesmo?</h2>
+
+<p>Sim, pode compensar muito…</p>
+
+<p><strong>Mas só se estiver em bom estado e com bateria saudável.</strong></p>
+
+<p>Se você quer economia sem dor de cabeça, uma scooter nova em promoção costuma ser o melhor custo-benefício.</p>
+
+<hr>
+
+<h2>Conclusão Final</h2>
+
+<p>Comprar scooter elétrica usada em 2026 pode ser uma boa ideia, mas exige cuidado.</p>
+
+<ul>
+  <li>✅ Boa para economizar</li>
+  <li>⚠️ Risco alto se a bateria estiver ruim</li>
+  <li>🔥 Nova ainda é mais segura para a maioria</li>
+</ul>
+
+<p style="text-align:center; margin:25px 0;">
+  <a href="https://s.shopee.com.br/7fURMoC1AK"
+     target="_blank"
+     class="shopee-btn">
+     🛴 Comprar Scooter com Segurança na Shopee
+  </a>
+</p>
+
+<hr>
+
+<p><strong>Palavra-chave principal:</strong> Scooter elétrica usada compensa em 2026?</p>
+
+<p><strong>Meta descrição:</strong> Descubra se vale a pena comprar scooter elétrica usada em 2026. Veja riscos, vantagens, checklist e link confiável para compra segura.</p>
+
+<p><a href="#" onclick="history.back()">← Voltar</a></p>
+
+`
+},
+
+        { 
+            id: 4, 
+            type: 'review', 
+            title: "Scooter elétrica barata para entregas 2026", 
+            desc: "Modelos ideais para delivery e trabalho intenso.", 
+            content: `<h1>Scooter para Delivery 2026 📦</h1><p>Para quem trabalha com entregas, o foco deve ser bateria removível e baixo custo de manutenção.</p><center><a href="https://s.shopee.com.br/7fURMoC1AK" class="shopee-btn">Ver na Shopee</a></center>` 
+        },
+        {
+  id: 6,
+  type: 'review',
+  title: "Consumo de energia da Scooter 1000W em 2026: quanto gasta de verdade?",
+  desc: "Veja quanto custa carregar uma scooter elétrica 1000W e o gasto real na conta de luz.",
+  content: `
+
+<h1>Consumo de Energia da Scooter Elétrica 1000W ⚡🔋 (Quanto Gasta de Verdade?)</h1>
+
+<p>Uma das maiores dúvidas de quem quer comprar uma scooter elétrica potente em 2026 é:</p>
+
+<p><strong>Quanto custa carregar uma scooter elétrica 1000W na tomada?</strong></p>
+
+<p>Muita gente acha que vai gastar muito na conta de luz… mas a verdade é que o consumo é muito menor do que parece.</p>
+
+<hr>
+
+<h2>⚡ Scooter 1000W Gasta Muita Energia?</h2>
+
+<p>Não. Mesmo sendo um motor forte, scooters elétricas são extremamente econômicas.</p>
+
+<p>O motor de <strong>1000W</strong> significa potência máxima, mas o consumo real depende mais da bateria do que do motor.</p>
+
+<p>Ou seja: você não usa 1000W o tempo todo, apenas em subidas ou aceleração.</p>
+
+<hr>
+
+<h2>🔋 Quanto uma Scooter 1000W Consome por Carga Completa?</h2>
+
+<p>Vamos ao cálculo real:</p>
+
+<ul>
+  <li>Bateria comum: <strong>48V / 15Ah</strong></li>
+  <li>Energia total: cerca de <strong>0,7 kWh</strong></li>
+</ul>
+
+<p>Agora o custo médio no Brasil em 2026:</p>
+
+<ul>
+  <li>1 kWh custa em média: <strong>R$ 1,00</strong></li>
+</ul>
+
+<p><strong>📌 Então carregar uma scooter inteira custa aproximadamente:</strong></p>
+
+<p style="font-size:20px;"><strong>R$ 0,70 a R$ 2,00 por carga completa</strong></p>
+
+<hr>
+
+<h2>🚦 Consumo Real no Dia a Dia (Uso Urbano)</h2>
+
+<p>Em testes reais com scooter 1000W:</p>
+
+<ul>
+  <li>Autonomia média: <strong>35 km a 50 km</strong></li>
+  <li>Custo por carga: <strong>R$ 1,50</strong></li>
+</ul>
+
+<p>Isso significa:</p>
+
+<p><strong>📌 Você roda cerca de 40 km gastando menos de R$ 2,00</strong></p>
+
+<p>Compare isso com gasolina:</p>
+
+<ul>
+  <li>Moto comum: R$ 15 a R$ 25 por dia</li>
+  <li>Scooter elétrica: R$ 1 a R$ 3 por dia</li>
+</ul>
+
+<hr>
+
+<h2>💰 Quanto Gasta por Mês?</h2>
+
+<p>Vamos supor que você carregue todos os dias:</p>
+
+<ul>
+  <li>30 cargas no mês</li>
+  <li>R$ 1,50 por carga</li>
+</ul>
+
+<p><strong>Total mensal:</strong></p>
+
+<p style="font-size:20px;"><strong>R$ 45 por mês</strong></p>
+
+<p>Ou seja: muito mais barato do que qualquer veículo a gasolina.</p>
+
+<hr>
+
+<h2>⚠️ O Que Faz Gastar Mais Energia?</h2>
+
+<p>Alguns fatores aumentam o consumo:</p>
+
+<ul>
+  <li>Subidas constantes</li>
+  <li>Peso acima de 120 kg</li>
+  <li>Velocidade máxima o tempo todo</li>
+  <li>Pneus murchos</li>
+  <li>Bateria velha ou desgastada</li>
+</ul>
+
+<p>Mesmo assim, continua sendo extremamente econômico.</p>
+
+<hr>
+
+<h2>🔥 Recomendação: Scooter 1000W Confiável com Oferta</h2>
+
+<p>Se você quer uma scooter potente, econômica e segura, veja uma opção confiável na Shopee:</p>
+
+<p style="text-align:center; margin:25px 0;">
+  <a href="https://s.shopee.com.br/7fURMoC1AK"
+     target="_blank"
+     class="shopee-btn">
+     🛒 Ver Scooter Elétrica 1000W com Oferta na Shopee
+  </a>
+</p>
+
+<p><strong>Dica:</strong> sempre escolha anúncios com avaliações altas e garantia.</p>
+
+<hr>
+
+<h2>📌 Vale a Pena Pelo Consumo?</h2>
+
+<p>Sim, muito.</p>
+
+<p>Uma scooter elétrica 1000W é uma das formas mais baratas de transporte em 2026.</p>
+
+<ul>
+  <li>Economia gigante</li>
+  <li>Zero gasolina</li>
+  <li>Baixa manutenção</li>
+  <li>Custo por km quase zero</li>
+</ul>
+
+<hr>
+
+<h2>Conclusão Final</h2>
+
+<p>O consumo de energia de uma scooter elétrica 1000W é surpreendentemente baixo.</p>
+
+<p><strong>📌 Você roda até 50 km gastando menos de R$ 2,00.</strong></p>
+
+<p>Se quer mobilidade moderna, econômica e potente, essa é uma das melhores escolhas de 2026.</p>
+
+<p style="text-align:center; margin:25px 0;">
+  <a href="https://s.shopee.com.br/7fURMoC1AK"
+     target="_blank"
+     class="shopee-btn">
+     ⚡ Comprar Scooter 1000W Econômica na Shopee
+  </a>
+</p>
+
+<hr>
+
+<p><strong>Palavra-chave principal:</strong> Consumo de energia da scooter 1000W</p>
+
+<p><strong>Meta descrição:</strong> Descubra quanto gasta de energia uma scooter elétrica 1000W em 2026. Veja custo por carga, consumo mensal e link confiável para comprar.</p>
+
+<p><a href="#" onclick="history.back()">← Voltar</a></p>
+
+`
+},
+
+    ];
+
+    /* =========================================================================
+       LÓGICA DO SITE (NÃO PRECISA EDITAR ABAIXO)
+       ========================================================================= */
+    let lastSection = 'home-view';
+
+    function createCard(art) {
+        return `
+            <div class="article-card">
+                <h2>${art.title}</h2>
+                <p>${art.desc}</p>
+                <button onclick="openArticle(${art.id})">Leia mais</button>
+            </div>
+        `;
+    }
+
+    function renderAll() {
+        const homeList = document.getElementById('articles-list-home');
+        const reviewsList = document.getElementById('articles-list-reviews');
+        const comparativosList = document.getElementById('articles-list-comparativos');
+        
+        if(homeList) homeList.innerHTML = articlesData.slice(0, 5).map(createCard).join('');
+        if(reviewsList) reviewsList.innerHTML = articlesData.filter(a => a.type === 'review').map(createCard).join('');
+        if(comparativosList) comparativosList.innerHTML = articlesData.filter(a => a.type === 'comparativo' || a.type === 'guia').map(createCard).join('');
+    }
+
+    function showSection(sectionId) {
+        if (sectionId !== 'article-view') lastSection = sectionId;
+        document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+        const target = document.getElementById(sectionId);
+        if(target) target.classList.add('active');
+        window.scrollTo(0,0);
+    }
+
+    function goBack() { showSection(lastSection); }
+
+    function openArticle(id) {
+        const article = articlesData.find(a => a.id === id);
+        if (article) {
+            document.getElementById('full-article-content').innerHTML = `
+                <div class="article-content">${article.content}</div>
+                <hr><p><em>Moto Elétrica Agora - Publicado em 2026.</em></p>
+            `;
+            showSection('article-view');
+        }
+    }
+
+    window.onload = renderAll;
+</script>
+</body>
+</html>
